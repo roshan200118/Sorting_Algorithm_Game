@@ -1,0 +1,26 @@
+header#header-contents
+    div.col-5.runner-left.title-text
+        a(href="/")
+            i(class="fas fa-gamepad icon-link" style="padding-right: 15px;") 
+        div  
+            div Sorting Algorithm Game
+            div #{pageTitle} 
+                if algLvl
+                    span Level #{algLvl}
+
+    div.col-2.runner-center
+        if usr 
+            span= usr
+        else 
+            span Guest
+        
+
+    div.col-5.runner-right
+        a(class='link-text' href='/')
+            i.fas.fa-home
+        div.line-seperator
+        a(class='link-text' href='/login') 
+            if usr
+                span Log Out
+            else 
+                span Login

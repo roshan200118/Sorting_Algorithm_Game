@@ -1,0 +1,17 @@
+extends index.pug
+
+block content 
+    - var i = 1;
+
+    div.select-menu
+        h1 Select a #{pageTitle} Level
+    
+        div.lvl-sel-row
+           while i <= maxLvl
+                if i <= currLvl
+                    a(href="/" + baseUrl + "/"+ i + "")
+                        button.btn.btn-primary
+                            span(style="font-weight: bold; font-size: 25px;")= i++
+                else 
+                    button.btn.btn-primary(disabled="disabled")
+                        span(style="font-weight: bold; font-size: 25px;")= i++

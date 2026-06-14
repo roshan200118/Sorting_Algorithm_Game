@@ -13,7 +13,7 @@ app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
 // Public client side static file
-app.use(express.static("static"));
+app.use(express.static(path.join(__dirname, "static")));
 
 // Routes
 var mergeSortRouter = require('./routes/mergesort_routes');

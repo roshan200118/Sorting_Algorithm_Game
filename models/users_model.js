@@ -1,20 +1,14 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
-function newConn()
-{
-    // let conn = mysql.createConnection({
-    //     host:'localhost',
-    //     user: 'root',
-    //     password:'password',
-    //     database:'3350_proj'
-    // });
-
-    let conn = mysql.createConnection({
-        host:'us-cdbr-east-06.cleardb.net',
-        user: 'b4e2bb2ed7cf5b',
-        password:'50e4f7f6',
-        database:'heroku_604c8af702e1b5e'
+function newConn() {
+    const conn = mysql.createConnection({
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME
     });
+
     return conn;
 }
+
 module.exports = newConn;

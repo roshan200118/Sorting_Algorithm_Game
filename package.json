@@ -11,9 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.6",
+    "dotenv": "^17.4.2",
     "express": "^4.17.2",
     "functional-red-black-tree": "^1.0.1",
     "mysql": "^2.18.1",
+    "mysql2": "^3.22.5",
     "pug": "^3.0.2"
   }
 }
